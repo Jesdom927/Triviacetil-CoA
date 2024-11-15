@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triviacetil-CoA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+            color: #2c3e50;
+            text-shadow: 2px 2px 5px #bdc3c7;
+        }
+        .slider {
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #2c3e50;
+            border-radius: 10px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            flex-shrink: 0;
+            border-bottom: 2px solid #2c3e50;
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.5em;
+            border-radius: 5px;
+        }
+        .controls button:hover {
+            background-color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Triviacetil-CoA</h1>
+    <div class="slider">
+        <div class="slides" id="slides">
+            <!-- 40 imágenes -->
+            <img src="imagen1.jpg.png" alt="Imagen 1">
+            <img src="imagen2.jpg.png" alt="Imagen 2">
+            <img src="imagen3.jpg.png" alt="Imagen 3">
+            <img src="imagen4.jpg.png" alt="Imagen 4">
+            <img src="imagen5.jpg.png" alt="Imagen 5">
+            <img src="imagen6.jpg.png" alt="Imagen 6">
+            <img src="imagen7.jpg.png" alt="Imagen 7">
+            <img src="imagen8.jpg.png" alt="Imagen 8">
+            <img src="imagen9.jpg.png" alt="Imagen 9">
+            <img src="imagen10.jpg.png" alt="Imagen 10">
+            <img src="imagen11.jpg.png" alt="Imagen 11">
+            <img src="imagen12.jpg.png" alt="Imagen 12">
+            <img src="imagen13.jpg.png" alt="Imagen 13">
+            <img src="imagen14.jpg.png" alt="Imagen 14">
+            <img src="imagen15.jpg.png" alt="Imagen 15">
+            <img src="imagen16.jpg.png" alt="Imagen 16">
+            <img src="imagen17.jpg.png" alt="Imagen 17">
+            <img src="imagen18.jpg.png" alt="Imagen 18">
+            <img src="imagen19.jpg.png" alt="Imagen 19">
+            <img src="imagen20.jpg.png" alt="Imagen 20">
+            <img src="imagen21.jpg.png" alt="Imagen 21">
+            <img src="imagen22.jpg.png" alt="Imagen 22">
+            <img src="imagen23.jpg.png" alt="Imagen 23">
+            <img src="imagen24.jpg.png" alt="Imagen 24">
+            <img src="imagen25.jpg.png" alt="Imagen 25">
+            <img src="imagen26.jpg.png" alt="Imagen 26">
+            <img src="imagen27.jpg.png" alt="Imagen 27">
+            <img src="imagen28.jpg.png" alt="Imagen 28">
+            <img src="imagen29.jpg.png" alt="Imagen 29">
+            <img src="imagen30.jpg.png" alt="Imagen 30">
+            <img src="imagen31.jpg.png" alt="Imagen 31">
+            <img src="imagen32.jpg.png" alt="Imagen 32">
+            <img src="imagen33.jpg.png" alt="Imagen 33">
+            <img src="imagen34.jpg.png" alt="Imagen 34">
+            <img src="imagen35.jpg.png" alt="Imagen 35">
+            <img src="imagen36.jpg.png" alt="Imagen 36">
+            <img src="imagen37.jpg.png" alt="Imagen 37">
+            <img src="imagen38.jpg.png" alt="Imagen 38">
+        </div>
+        <div class="controls">
+            <button onclick="prev()">⟨</button>
+            <button onclick="next()">⟩</button>
+        </div>
+    </div>
+    <script>
+        const slides = document.getElementById('slides');
+        let index = 0;
+        function next() {
+            index = (index + 1) % slides.children.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+        function prev() {
+            index = (index - 1 + slides.children.length) % slides.children.length;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+    </script>
+</body>
+</html>
